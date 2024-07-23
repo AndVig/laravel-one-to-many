@@ -23,7 +23,9 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'title'=>['required','unique:posts','max:60'],
-            'content'=>['nullable']
+            'content'=>['nullable'],
+
+            'type_id'=>['nullable','exists:types,id']
         ];
     }
 }

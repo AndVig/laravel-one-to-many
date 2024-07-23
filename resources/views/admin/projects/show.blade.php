@@ -11,7 +11,9 @@
 
     <p>{{$project->content}}</p>
     <hr>
+    @if(session('$project->type->name'))
     Category: {{$project->type->name}}
+    @endif
     <hr>
     <a href="{{route('admin.projects.index')}}" class="btn btn-info">Torna alla lista dei project</a>
 </div>
