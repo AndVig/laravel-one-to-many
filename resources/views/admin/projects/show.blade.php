@@ -11,6 +11,8 @@
 
     <p>{{$project->content}}</p>
     <hr>
+    Category: {{$project->type->name}}
+    <hr>
     <a href="{{route('admin.projects.index')}}" class="btn btn-info">Torna alla lista dei project</a>
 </div>
 @endsection
